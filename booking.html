@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Donna Salon & Spa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="booking.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>Donna Salon & Spa</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    <li><a href="booking.html" class="nav-link active">Book Now</a></li>
+                    <li><a href="admin.html" class="nav-link admin-link">Admin Panel</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-header">
+                <h1>Book Your Appointment</h1>
+                <p>Schedule your visit to Donna Salon & Spa - we can't wait to pamper you!</p>
+            </div>
+
+            <div class="booking-container">
+                <!-- Step 1: Service Selection -->
+                <div class="booking-step active" id="step1">
+                    <h2>Choose Your Service</h2>
+                    <div class="services-selection">
+                        <div class="service-category">
+                            <h3>Hair Services</h3>
+                            <div class="service-options">
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="Men's Haircut - $18+">
+                                    <span class="service-info">
+                                        <span class="service-name">Men's Haircut</span>
+                                        <span class="service-price">$18+</span>
+                                    </span>
+                                </label>
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="Women's Haircut & Style - $35+">
+                                    <span class="service-info">
+                                        <span class="service-name">Women's Haircut & Style</span>
+                                        <span class="service-price">$35+</span>
+                                    </span>
+                                </label>
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="Hair Coloring - $45+">
+                                    <span class="service-info">
+                                        <span class="service-name">Hair Coloring</span>
+                                        <span class="service-price">$45+</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="service-category">
+                            <h3>Massage Therapy</h3>
+                            <div class="service-options">
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="Swedish Massage 30min - $55">
+                                    <span class="service-info">
+                                        <span class="service-name">Swedish Massage (30 min)</span>
+                                        <span class="service-price">$55</span>
+                                    </span>
+                                </label>
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="Swedish Massage 60min - $75">
+                                    <span class="service-info">
+                                        <span class="service-name">Swedish Massage (60 min)</span>
+                                        <span class="service-price">$75</span>
+                                    </span>
+                                </label>
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="Deep Tissue Massage 60min - $85">
+                                    <span class="service-info">
+                                        <span class="service-name">Deep Tissue Massage (60 min)</span>
+                                        <span class="service-price">$85</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="service-category">
+                            <h3>Spa Packages</h3>
+                            <div class="service-options">
+                                <label class="service-option featured">
+                                    <input type="radio" name="service" value="Package A - $300">
+                                    <span class="service-info">
+                                        <span class="service-name">Package A</span>
+                                        <span class="service-price">$300</span>
+                                    </span>
+                                    <span class="most-popular">MOST POPULAR</span>
+                                </label>
+                                <label class="service-option featured">
+                                    <input type="radio" name="service" value="Package B - $450">
+                                    <span class="service-info">
+                                        <span class="service-name">Package B</span>
+                                        <span class="service-price">$450</span>
+                                    </span>
+                                </label>
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="European Facial Package - $225">
+                                    <span class="service-info">
+                                        <span class="service-name">European Facial Package</span>
+                                        <span class="service-price">$225</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="service-category">
+                            <h3>Other Services</h3>
+                            <div class="service-options">
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="Manicure & Pedicure - $55+">
+                                    <span class="service-info">
+                                        <span class="service-name">Manicure & Pedicure</span>
+                                        <span class="service-price">$55+</span>
+                                    </span>
+                                </label>
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="Facial Treatment - $45+">
+                                    <span class="service-info">
+                                        <span class="service-name">Facial Treatment</span>
+                                        <span class="service-price">$45+</span>
+                                    </span>
+                                </label>
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="Waxing Services - $5+">
+                                    <span class="service-info">
+                                        <span class="service-name">Waxing Services</span>
+                                        <span class="service-price">$5+</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary next-step" onclick="nextStep()">Continue</button>
+                </div>
+
+                <!-- Step 2: Date & Time Selection -->
+                <div class="booking-step" id="step2">
+                    <h2>Select Date & Time</h2>
+                    <div class="datetime-selection">
+                        <div class="calendar-container">
+                            <div class="calendar-header">
+                                <button id="prevMonth" class="calendar-nav">&lt;</button>
+                                <h3 id="currentMonth"></h3>
+                                <button id="nextMonth" class="calendar-nav">&gt;</button>
+                            </div>
+                            <div class="calendar-grid" id="calendarGrid">
+                                <!-- Calendar will be generated by JavaScript -->
+                            </div>
+                        </div>
+                        <div class="time-slots" id="timeSlots">
+                            <h4>Available Times</h4>
+                            <div class="time-selection-hint"></div>
+                            <div class="time-grid">
+                                <!-- Time slots will be generated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-navigation">
+                        <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+                        <button class="btn btn-primary next-step" onclick="nextStep()" disabled>Continue</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Contact Information -->
+                <div class="booking-step" id="step3">
+                    <h2>Your Information</h2>
+                    <form class="booking-form" id="bookingForm">
+                        <div class="form-group">
+                            <label for="customerName">Full Name *</label>
+                            <input type="text" id="customerName" name="customerName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerEmail">Email Address *</label>
+                            <input type="email" id="customerEmail" name="customerEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerPhone">Phone Number *</label>
+                            <input type="tel" id="customerPhone" name="customerPhone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="specialRequests">Special Requests or Notes</label>
+                            <textarea id="specialRequests" name="specialRequests" rows="3" placeholder="Any special requests, allergies, or notes for your appointment..."></textarea>
+                        </div>
+                    </form>
+                    <div class="step-navigation">
+                        <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+                        <button class="btn btn-primary next-step" onclick="nextStep()">Continue to Payment</button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Payment Options -->
+                <div class="booking-step" id="step4">
+                    <h2>Payment Options</h2>
+                    <p class="payment-subtitle">Choose how you'd like to pay for your appointment</p>
+                    
+                    <!-- Deposit Policy Notice -->
+                    <div class="deposit-notice">
+                        <div class="deposit-icon">🛡️</div>
+                        <div class="deposit-content">
+                            <h3>$5 Appointment Deposit Required</h3>
+                            <p><strong>To secure your appointment, a $5 deposit is required.</strong></p>
+                            <ul class="deposit-benefits">
+                                <li>✅ <strong>Fully refunded</strong> when you arrive for your appointment</li>
+                                <li>✅ Protects against last-minute cancellations (under 24 hours)</li>
+                                <li>✅ Ensures your preferred time slot is reserved</li>
+                                <li>✅ Quick and secure payment process</li>
+                            </ul>
+                            <p class="deposit-policy">
+                                <small><strong>Refund Policy:</strong> Your $5 deposit will be automatically refunded to your original payment method when you check in for your appointment. If you cancel with less than 24 hours notice, the deposit helps cover our booking costs.</small>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-options">
+                        <!-- Pay Now Options -->
+                        <div class="payment-section">
+                            <h3>💳 Pay Now (Save Time at Your Appointment)</h3>
+                            <div class="payment-methods">
+                                <!-- CashApp Option -->
+                                <div class="payment-method">
+                                    <input type="radio" name="paymentMethod" value="cashapp" id="cashapp">
+                                    <label for="cashapp" class="payment-card">
+                                        <div class="payment-header">
+                                            <span class="payment-title">CashApp</span>
+                                            <span class="payment-badge">Instant</span>
+                                        </div>
+                                        <div class="qr-container">
+                                            <div class="qr-image-wrapper">
+                                                <img src="donna cashapp qr code.jpeg" alt="CashApp QR Code" class="qr-code" onclick="zoomImage(this, 'CashApp QR Code')">
+                                                <div class="zoom-icon" onclick="zoomImage(document.querySelector('[src=&quot;donna cashapp qr code.jpeg&quot;]'), 'CashApp QR Code')">🔍</div>
+                                            </div>
+                                            <p class="qr-instruction">Scan with CashApp to pay • <span class="zoom-text">Click to zoom</span></p>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <!-- PayPal Option -->
+                                <div class="payment-method">
+                                    <input type="radio" name="paymentMethod" value="paypal" id="paypal">
+                                    <label for="paypal" class="payment-card">
+                                        <div class="payment-header">
+                                            <span class="payment-title">PayPal</span>
+                                            <span class="payment-badge">Secure</span>
+                                        </div>
+                                        <div class="qr-container">
+                                            <div class="qr-image-wrapper">
+                                                <img src="donna paypal qr code.jpeg" alt="PayPal QR Code" class="qr-code" onclick="zoomImage(this, 'PayPal QR Code')">
+                                                <div class="zoom-icon" onclick="zoomImage(document.querySelector('[src=&quot;donna paypal qr code.jpeg&quot;]'), 'PayPal QR Code')">🔍</div>
+                                            </div>
+                                            <p class="qr-instruction">Scan with PayPal app to pay • <span class="zoom-text">Click to zoom</span></p>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <!-- Zelle Option -->
+                                <div class="payment-method">
+                                    <input type="radio" name="paymentMethod" value="zelle" id="zelle">
+                                    <label for="zelle" class="payment-card">
+                                        <div class="payment-header">
+                                            <span class="payment-title">Zelle</span>
+                                            <span class="payment-badge">Bank Transfer</span>
+                                        </div>
+                                        <div class="zelle-info">
+                                            <div class="zelle-image-wrapper">
+                                                <img src="donna zelle phone number and name.jpeg" alt="Zelle Information" class="zelle-image" onclick="zoomImage(this, 'Zelle Payment Information')">
+                                                <div class="zoom-icon" onclick="zoomImage(document.querySelector('[src=&quot;donna zelle phone number and name.jpeg&quot;]'), 'Zelle Payment Information')">🔍</div>
+                                            </div>
+                                            <div class="zelle-details">
+                                                <p><strong>Send to:</strong> 410-370-7710</p>
+                                                <p><strong>Name:</strong> Donna</p>
+                                                <p class="zelle-note">Use your bank's Zelle feature • <span class="zoom-text">Click image to zoom</span></p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Note about deposit requirement -->
+                        <div class="deposit-reminder">
+                            <p><strong>Note:</strong> To secure your appointment and protect against last-minute cancellations, the $5 deposit must be paid online now. You'll pay the remaining service balance when you arrive.</p>
+                        </div>
+                    </div>
+
+                    <div class="payment-total">
+                        <div class="total-display">
+                            <span class="total-label">Deposit Required Now:</span>
+                            <span class="total-amount">$5.00</span>
+                        </div>
+                        <div class="service-price-display">
+                            <span class="service-label">Full Service Price:</span>
+                            <span class="service-amount" id="paymentTotal">TBD</span>
+                        </div>
+                        <p class="pricing-note">
+                            *You're only paying the $5 deposit now. The remaining balance will be paid at your appointment.<br>
+                            **Deposit is fully refunded when you arrive for your appointment.
+                        </p>
+                    </div>
+
+                    <div class="step-navigation">
+                        <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+                        <button class="btn btn-primary next-step" onclick="nextStep()" disabled>Continue to Review</button>
+                    </div>
+                </div>
+
+                <!-- Step 5: Confirmation -->
+                <div class="booking-step" id="step5">
+                    <h2>Confirm Your Appointment</h2>
+                    <div class="booking-summary">
+                        <div class="summary-card">
+                            <h3>Appointment Details</h3>
+                            <div class="summary-item">
+                                <span class="label">Service:</span>
+                                <span class="value" id="summaryService"></span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Date:</span>
+                                <span class="value" id="summaryDate"></span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Time:</span>
+                                <span class="value" id="summaryTime"></span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Name:</span>
+                                <span class="value" id="summaryName"></span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Phone:</span>
+                                <span class="value" id="summaryPhone"></span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Email:</span>
+                                <span class="value" id="summaryEmail"></span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Payment Method:</span>
+                                <span class="value" id="summaryPayment"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking-terms">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="agreeTerms" required>
+                            <span class="checkmark"></span>
+                            I agree to the cancellation policy and understand that 24-hour notice is required for cancellations.
+                        </label>
+                    </div>
+                    <div class="step-navigation">
+                        <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+                        <button class="btn btn-featured" onclick="confirmBooking()">Confirm Appointment</button>
+                    </div>
+                </div>
+
+                <!-- Success Message -->
+                <div class="booking-step" id="success" style="display: none;">
+                    <div class="success-message">
+                        <i class="fas fa-check-circle"></i>
+                        <h2>Appointment Confirmed!</h2>
+                        <p>Thank you for booking with Donna Salon & Spa. We've sent a confirmation to your email and Donna has been notified of your appointment.</p>
+                        <div class="confirmation-details">
+                            <p><strong>Confirmation Number:</strong> <span id="confirmationNumber"></span></p>
+                            <p><strong>Next Steps:</strong> You'll receive a reminder 24 hours before your appointment.</p>
+                        </div>
+                        <div class="success-actions">
+                            <a href="index.html" class="btn btn-primary">Return to Home</a>
+                            <button class="btn btn-book-another" onclick="newBooking()">Book Another Appointment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Donna Salon & Spa</h3>
+                    <p>Full-service salon and spa in Glen Burnie, MD.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: Bettyboops804@gmail.com</p>
+                    <p>Phone: 410-370-7710</p>
+                    <p>1408 Crain Highway South<br>Glen Burnie, MD 21061</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Donna Salon & Spa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Zoom Modal -->
+    <div id="imageZoomModal" class="zoom-modal">
+        <div class="zoom-modal-content">
+            <span class="zoom-close">&times;</span>
+            <img id="zoomedImage" class="zoomed-image" src="" alt="QR Code">
+            <div class="zoom-caption"></div>
+        </div>
+    </div>
+
+    <!-- Web3Forms for completely automatic email sending -->
+    <script>
+        // Web3Forms configuration - completely automatic, no email client needed
+        const WEB3FORMS_ACCESS_KEY = "5530283c-575c-419b-bb16-d3481ad7ad01"; // Free at web3forms.com
+    </script>
+    
+    <script src="script.js"></script>
+    <script src="booking.js"></script>
+</body>
+</html>

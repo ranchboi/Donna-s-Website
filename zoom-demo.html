@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Zoom Demo - Donna Salon</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            max-width: 800px; 
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        .demo-section {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        .payment-demo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .demo-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .demo-card:hover {
+            transform: translateY(-5px);
+            border-color: #6366f1;
+        }
+        .demo-qr {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            margin: 10px auto;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .demo-qr:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+        }
+        .zoom-hint {
+            background: #e0f2fe;
+            border: 1px solid #0ea5e9;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .feature-item {
+            background: white;
+            border-left: 4px solid #10b981;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 { color: #333; }
+        h3 { color: #6366f1; }
+    </style>
+</head>
+<body>
+    <div class="highlight">
+        <h1>🔍 QR Code Zoom Feature Demo</h1>
+        <p><strong>Enhanced Payment Experience</strong> - Click any QR code or payment image to zoom in for easy scanning!</p>
+    </div>
+
+    <div class="demo-section">
+        <h2>🎯 New Zoom Features</h2>
+        <div class="features-list">
+            <div class="feature-item">
+                <h3>📱 Click to Zoom</h3>
+                <p>Click any QR code or payment image to open a large, clear view</p>
+            </div>
+            <div class="feature-item">
+                <h3>🔍 Zoom Icon</h3>
+                <p>Magnifying glass icon appears on hover to show images are zoomable</p>
+            </div>
+            <div class="feature-item">
+                <h3>📱 Mobile Friendly</h3>
+                <p>Optimized zoom modal for mobile devices and touch screens</p>
+            </div>
+            <div class="feature-item">
+                <h3>⚡ Easy Close</h3>
+                <p>Close with X button, clicking outside, or pressing Escape key</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>💳 Payment Options with Zoom</h2>
+        <p>All payment QR codes and images now have zoom functionality:</p>
+        
+        <div class="payment-demo">
+            <div class="demo-card">
+                <h3>CashApp</h3>
+                <img src="donna cashapp qr code.jpeg" alt="CashApp QR Code" class="demo-qr">
+                <p><strong>✨ Click to zoom</strong><br>Scan with CashApp to pay</p>
+            </div>
+            
+            <div class="demo-card">
+                <h3>PayPal</h3>
+                <img src="donna paypal qr code.jpeg" alt="PayPal QR Code" class="demo-qr">
+                <p><strong>✨ Click to zoom</strong><br>Scan with PayPal app to pay</p>
+            </div>
+            
+            <div class="demo-card">
+                <h3>Zelle</h3>
+                <img src="donna zelle phone number and name.jpeg" alt="Zelle Information" class="demo-qr">
+                <p><strong>✨ Click to zoom</strong><br>View phone number and name</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="zoom-hint">
+        <h3>💡 How to Use</h3>
+        <p><strong>1.</strong> Go to the booking page and reach the payment step<br>
+        <strong>2.</strong> Look for the 🔍 zoom icon on any QR code<br>
+        <strong>3.</strong> Click the image or zoom icon<br>
+        <strong>4.</strong> View the large, clear image for easy scanning<br>
+        <strong>5.</strong> Close by clicking X, outside the image, or pressing Escape</p>
+    </div>
+
+    <div class="demo-section">
+        <h2>📱 Customer Benefits</h2>
+        <ul>
+            <li><strong>Easier Scanning:</strong> Large, clear QR codes for better phone camera recognition</li>
+            <li><strong>No Squinting:</strong> Zoom in to see all payment details clearly</li>
+            <li><strong>Better Mobile Experience:</strong> Touch-friendly zoom for all devices</li>
+            <li><strong>Quick Access:</strong> Instant zoom without leaving the booking page</li>
+            <li><strong>Professional Feel:</strong> Smooth animations and modern interface</li>
+        </ul>
+    </div>
+
+    <div class="highlight">
+        <h2>🧪 Test It Now!</h2>
+        <p>Go to <a href="http://localhost:8000/booking.html" style="color: #fbbf24; text-decoration: underline;">the booking page</a> and try the payment step to see the zoom functionality in action!</p>
+    </div>
+
+    <script>
+        // Add click handlers to demo images
+        document.addEventListener('DOMContentLoaded', function() {
+            const demoImages = document.querySelectorAll('.demo-qr');
+            demoImages.forEach(img => {
+                img.addEventListener('click', function() {
+                    alert('🔍 In the actual booking page, this would open a full-screen zoom view!\n\nGo to the booking page to see the real zoom functionality.');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

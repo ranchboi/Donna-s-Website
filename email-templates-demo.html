@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Templates Demo - Donna Salon</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            max-width: 900px; 
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        .email-template {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+            margin: 20px 0;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .email-header {
+            background: #f8fafc;
+            padding: 15px 20px;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .email-type {
+            font-weight: 600;
+            color: #333;
+        }
+        .email-recipient {
+            background: #6366f1;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+        .email-body {
+            padding: 20px;
+            background: white;
+        }
+        .email-subject {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f3f4f6;
+            border-radius: 8px;
+            border-left: 4px solid #6366f1;
+        }
+        .email-content {
+            color: #374151;
+            white-space: pre-line;
+            font-family: Georgia, serif;
+            line-height: 1.7;
+        }
+        .setup-info {
+            background: #f0f9ff;
+            border: 1px solid #0ea5e9;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .flow-diagram {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .flow-step {
+            background: white;
+            border-left: 4px solid #10b981;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 { color: #333; }
+        h3 { color: #6366f1; }
+        .badge {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="highlight">
+        <h1>📧 Automatic Email Templates</h1>
+        <p><strong>Professional, automatic email system</strong> - No more manual email sending required!</p>
+    </div>
+
+    <div class="setup-info">
+        <h2>🚀 How It Works</h2>
+        <div class="flow-diagram">
+            <div class="flow-step">
+                <h3>1. Customer Books</h3>
+                <p>Website automatically sends emails to both customer and Donna</p>
+            </div>
+            <div class="flow-step">
+                <h3>2. Donna Reviews</h3>
+                <p>Donna gets notification email with all appointment details</p>
+            </div>
+            <div class="flow-step">
+                <h3>3. Donna Responds</h3>
+                <p>One click to confirm or decline in admin panel</p>
+            </div>
+            <div class="flow-step">
+                <h3>4. Customer Notified</h3>
+                <p>Automatic email sent to customer with final status</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>📬 Email Templates</h2>
+
+    <!-- Template 1: New Booking to Donna -->
+    <div class="email-template">
+        <div class="email-header">
+            <div class="email-type">New Booking Notification</div>
+            <div class="email-recipient">To: Donna</div>
+        </div>
+        <div class="email-body">
+            <div class="email-subject">Subject: 🆕 New Appointment Booked - John Smith</div>
+            <div class="email-content">Hi Donna,
+
+A new appointment has been booked on your website!
+
+Customer Details:
+• Name: John Smith
+• Phone: 555-123-4567
+• Email: john@email.com
+
+Appointment Details:
+• Service: Men's Haircut - $18+
+• Date: 2025-09-19
+• Time: 3:00 PM
+• Confirmation #: DS123456
+• Special Requests: None
+
+Please log in to your admin panel to confirm or decline this appointment:
+http://localhost:8000/admin.html
+
+The customer is waiting for your confirmation.
+
+Best regards,
+Donna Salon & Spa System</div>
+        </div>
+    </div>
+
+    <!-- Template 2: Booking Confirmation to Customer -->
+    <div class="email-template">
+        <div class="email-header">
+            <div class="email-type">Booking Submitted</div>
+            <div class="email-recipient">To: Customer</div>
+        </div>
+        <div class="email-body">
+            <div class="email-subject">Subject: 📅 Appointment Confirmation - DS123456</div>
+            <div class="email-content">Hi John Smith,
+
+Thank you for booking with Donna Salon & Spa!
+
+Your appointment has been submitted and is pending confirmation.
+
+Appointment Details:
+• Service: Men's Haircut - $18+
+• Date: 2025-09-19
+• Time: 3:00 PM
+• Confirmation #: DS123456
+
+We will confirm your appointment within 24 hours. You'll receive another email once confirmed.
+
+If you need to make changes, please call us at 410-370-7710.
+
+Thank you for choosing Donna Salon & Spa!</div>
+        </div>
+    </div>
+
+    <!-- Template 3: Appointment Confirmed -->
+    <div class="email-template">
+        <div class="email-header">
+            <div class="email-type">Appointment Confirmed</div>
+            <div class="email-recipient">To: Customer</div>
+        </div>
+        <div class="email-body">
+            <div class="email-subject">Subject: ✅ Appointment Confirmed - Donna Salon & Spa</div>
+            <div class="email-content">Hi John Smith,
+
+Great news! Your appointment at Donna Salon & Spa has been confirmed!
+
+Appointment Details:
+• Service: Men's Haircut - $18+
+• Date: 2025-09-19
+• Time: 3:00 PM
+• Confirmation #: DS123456
+
+Location: 1408 Crain Highway South, Glen Burnie, MD 21061
+
+Please arrive 10 minutes early. If you need to reschedule or cancel, please call us at 410-370-7710.
+
+We look forward to seeing you!
+
+Best regards,
+Donna Salon & Spa
+410-370-7710</div>
+        </div>
+    </div>
+
+    <!-- Template 4: Appointment Cancelled -->
+    <div class="email-template">
+        <div class="email-header">
+            <div class="email-type">Appointment Cancelled</div>
+            <div class="email-recipient">To: Customer</div>
+        </div>
+        <div class="email-body">
+            <div class="email-subject">Subject: ❌ Appointment Update - Donna Salon & Spa</div>
+            <div class="email-content">Hi John Smith,
+
+We're sorry, but we need to cancel your appointment scheduled for 2025-09-19 at 3:00 PM.
+
+Reason: Scheduling conflict
+
+We sincerely apologize for any inconvenience this may cause. Please call us at 410-370-7710 to reschedule your appointment.
+
+We appreciate your understanding and look forward to serving you soon.
+
+Best regards,
+Donna Salon & Spa
+410-370-7710</div>
+        </div>
+    </div>
+
+    <div class="setup-info">
+        <h2>⚡ Setup Required</h2>
+        <p><strong>5-minute setup needed:</strong> Create free EmailJS account and connect your Gmail. See <strong>EMAILJS-SETUP-GUIDE.md</strong> for complete instructions.</p>
+        
+        <h3>✅ Benefits After Setup:</h3>
+        <ul>
+            <li><span class="badge">Automatic</span> No manual email sending</li>
+            <li><span class="badge">Professional</span> Branded, formatted emails</li>
+            <li><span class="badge">Free</span> 200 emails per month included</li>
+            <li><span class="badge">Instant</span> Emails send immediately</li>
+            <li><span class="badge">Reliable</span> 99.9% delivery rate</li>
+        </ul>
+    </div>
+
+    <div class="highlight">
+        <h2>🎯 Next Steps</h2>
+        <p><strong>1.</strong> Read the setup guide: <code>EMAILJS-SETUP-GUIDE.md</code><br>
+        <strong>2.</strong> Create your free EmailJS account<br>
+        <strong>3.</strong> Set up the 4 email templates above<br>
+        <strong>4.</strong> Update your website with the API keys<br>
+        <strong>5.</strong> Test with a booking - automatic emails will work!</p>
+    </div>
+</body>
+</html>

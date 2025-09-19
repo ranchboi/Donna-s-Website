@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Notification Test - Donna Salon</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            max-width: 600px; 
+            margin: 0 auto;
+        }
+        button { 
+            padding: 15px 25px; 
+            background: #6366f1; 
+            color: white; 
+            border: none; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        button:hover { 
+            background: #5b21b6; 
+        }
+        .info {
+            background: #e0f2fe;
+            border: 1px solid #0288d1;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .email-preview {
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>📧 Email Notification Test for Donna Salon</h1>
+    
+    <div class="info">
+        <h3>✅ Updated System:</h3>
+        <p>The website now sends email notifications to <strong>bettyboops804@gmail.com</strong> instead of SMS/text messages.</p>
+        <p>No more popup notifications - everything is clean and simple!</p>
+    </div>
+
+    <button onclick="testNewBookingEmail()">🆕 Test New Booking Email</button>
+    <button onclick="testConfirmationEmail()">✅ Test Confirmation Email</button>
+    <button onclick="testDeclineEmail()">❌ Test Decline Email</button>
+    
+    <div id="preview"></div>
+
+    <script>
+        function testNewBookingEmail() {
+            const subject = '🆕 New Appointment Booked - John Smith';
+            const message = `Hi Donna,
+
+A new appointment has been booked on your website!
+
+Customer Details:
+• Name: John Smith
+• Phone: 555-123-4567
+• Email: john@email.com
+
+Appointment Details:
+• Service: Men's Haircut - $18+
+• Date: 2025-09-19
+• Time: 3:00 PM
+• Confirmation #: DS123456
+
+Please log in to your admin panel to confirm or decline this appointment:
+http://localhost:8000/admin.html
+
+Password: donna2024
+
+The customer is waiting for your confirmation.
+
+Best regards,
+Donna Salon & Spa System`;
+
+            sendTestEmail('bettyboops804@gmail.com', subject, message);
+            showPreview('New Booking Email', subject, message);
+        }
+
+        function testConfirmationEmail() {
+            const subject = '✅ Appointment Confirmed - John Smith';
+            const message = `Hi Donna,
+
+You have confirmed an appointment:
+
+Customer: John Smith
+Service: Men's Haircut - $18+
+Date: 2025-09-19
+Time: 3:00 PM
+Phone: 555-123-4567
+Email: john@email.com
+
+The customer will be notified of the confirmation.
+
+Best regards,
+Donna Salon & Spa System`;
+
+            sendTestEmail('bettyboops804@gmail.com', subject, message);
+            showPreview('Confirmation Email', subject, message);
+        }
+
+        function testDeclineEmail() {
+            const subject = '❌ Appointment Cancelled - John Smith';
+            const message = `Hi Donna,
+
+You have cancelled an appointment:
+
+Customer: John Smith
+Service: Men's Haircut - $18+
+Date: 2025-09-19
+Time: 3:00 PM
+Phone: 555-123-4567
+
+The customer will be notified of the cancellation.
+
+Best regards,
+Donna Salon & Spa System`;
+
+            sendTestEmail('bettyboops804@gmail.com', subject, message);
+            showPreview('Decline Email', subject, message);
+        }
+
+        function sendTestEmail(emailAddress, subject, message) {
+            const encodedSubject = encodeURIComponent(subject);
+            const encodedBody = encodeURIComponent(message);
+            const mailtoLink = `mailto:${emailAddress}?subject=${encodedSubject}&body=${encodedBody}`;
+            
+            const link = document.createElement('a');
+            link.href = mailtoLink;
+            link.target = '_blank';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function showPreview(type, subject, message) {
+            document.getElementById('preview').innerHTML = `
+                <div class="email-preview">
+                    <h3>${type} Preview:</h3>
+                    <strong>To:</strong> bettyboops804@gmail.com<br>
+                    <strong>Subject:</strong> ${subject}<br><br>
+                    <strong>Message:</strong><br>
+                    ${message.replace(/\n/g, '<br>')}
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
